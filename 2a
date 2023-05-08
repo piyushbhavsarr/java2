@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class slip2 
+{
+  public static void main(String[] args)
+   {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter the number of friends: ");
+    int n = sc.nextInt();
+
+    HashSet<String> friends = new HashSet<String> ();
+
+    for (int i = 0; i < n; i++) 
+    {
+      System.out.print("Enter the name of friend " + (i+1) + ": ");
+      String name = sc.next();
+      friends.add(name);
+    }
+
+    HashSet<String> sortedFriends = new TreeSet<String>(friends);
+    System.out.println("Friends in ascending order:");
+    for (String friend : sortedFriends) 
+    {
+      System.out.println(friend);
+    }
+  }
+}
